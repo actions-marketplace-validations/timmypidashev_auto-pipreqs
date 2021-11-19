@@ -1,22 +1,27 @@
 name: "Automatic requirements.txt for Python Projects"
 description: "This action will automatically create the requirements.txt file for a python project using the pipreqs tool."
-author: "Ryan Rozario"
+author: "Timothy Pidashev"
 
 inputs:
   PROJECT_PATH:
     description: "Gives the path of the project"
     required: true
     default: "."
+   
+  IGNORE_PATH:
+    description: "Ignores external dependencies such as submodules"
+    required: true
+    default: ""
 
   REQUIREMENT_PATH:
     description: "Folder where requirements.txt has to be saved in"
     required: true
     default: "requirements.txt"
+    
   PROJECT_NAME:
     description: "Name of the project to include in the commit"
     required: true
-    default: ""
-
+    default: ""\
 
 runs:
   using: "docker"
