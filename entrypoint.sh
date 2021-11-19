@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-pipreqs --force --ignore --savepath $INPUT_REQUIREMENT_PATH $INPUT_IGNORE_PATH $INPUT_PROJECT_PATH
+pipreqs --force --ignore --savepath $INPUT_IGNORE_PATH $INPUT_REQUIREMENT_PATH $INPUT_PROJECT_PATH
 
 set -e
 sh -c "ls"
