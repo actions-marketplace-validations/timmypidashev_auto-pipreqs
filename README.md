@@ -22,10 +22,11 @@ jobs:
       - name: Self test
         id: selftest
 
-        uses: ryan-rozario/pipreqs-action-cpy@master
+        uses: timmypidashev/pipreqs-action-cpy@master
 
         # Put an example of mandatory inputs here
         with:
+          IGNORE_PATH: subodules #default is none, i added because i needed it at one point :)
           PROJECT_PATH: project_folder   #default is the root of the repository
           REQUIREMENT_PATH: project_folder/requirements.txt  #default is requirement.txt in the root of your repository 
 ```
@@ -34,6 +35,7 @@ jobs:
 
 | Input                                             | Description                                        |Default                                        |
 |------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| `IGNORE_PATH` | Ignores a specific directory that contains third_party python files, etc(submodules)
 | `PROJECT_PATH`  | Gives the path to the project folder that contains the python files    |  .
 | `REQUIREMENT_PATH`  | Gives the path to the location where requirements.txt has to be saved, including the requirements.txt file name    | requirements.txt|
 | `PROJECT_NAME`  | Includes the project name in the commit  | project_name |
