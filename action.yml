@@ -21,7 +21,7 @@ inputs:
   PROJECT_NAME:
     description: "Name of the project to include in the commit"
     required: true
-    default: ""\
+    default: ""
 
 runs:
   using: "docker"
