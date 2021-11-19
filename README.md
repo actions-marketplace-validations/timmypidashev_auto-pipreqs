@@ -22,7 +22,7 @@ jobs:
       - name: Self test
         id: selftest
 
-        uses: timmypidashev/pipreqs-action-cpy@master
+        uses: timmypidashev/auto-pipreqs@master
 
         # Put an example of mandatory inputs here
         with:
